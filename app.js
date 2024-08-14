@@ -63,3 +63,11 @@ function reiniciarJogo() {
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
+
+function bloquearCaractere(event) {
+    if (event.key === 'e' || event.key === 'E' || event.key === '-' || event.key === '+') {
+        event.preventDefault();
+        return false;
+    }
+    return true;
+}
